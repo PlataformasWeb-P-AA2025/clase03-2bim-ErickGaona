@@ -14,6 +14,9 @@ class Estudiante(models.Model):
 
     def get_suma_cedula(self):
         return sum([int(s) for s in self.cedula])
+    ## agregar la primera letra del apellido
+    def get_primer_letra_nombre(self):
+        return self.nombre[0]
 
 
 class NumeroTelefonico(models.Model):

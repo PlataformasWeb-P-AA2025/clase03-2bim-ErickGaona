@@ -17,6 +17,7 @@ class NumeroTelefonico(models.Model):
     tipo = models.CharField(max_length=100)
     estudiante = models.ForeignKey(Estudiante, on_delete=models.CASCADE,
     related_name="mis_numeros_telefonicos")
+    ## cuando no exista related name usamos numerotelefonico_set
 
     def __str__(self):
         return "%s %s" % (self.telefono, self.tipo)
