@@ -1,0 +1,13 @@
+<h2> Ver paises </h2>
+<h3>Número de países {{ numero_paises }}</h3>
+
+{% for p in paises %}
+  <b>{{ p.nombre }}</b> - Capital: {{ p.capital }} - Provincias: {{ p.numero_provincias }} - Habitantes: {{ p.numero_habitantes }}
+  <br/>
+{% endfor %}
+<hr>
+<ul>
+  {% for p in mis_paises %}
+    <li>{{ p }} </li>
+  {% endfor %}
+</ul>

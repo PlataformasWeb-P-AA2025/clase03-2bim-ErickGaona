@@ -1,11 +1,11 @@
-<h2>Crear Estudiante</h2>
-## action vacio para que no se redirija a otra página
+<h2>Agregar País</h2>
 <form action="" method="post">
   {% csrf_token %}
-
+  
   {{ formulario.as_p }}
-
+  
   <p><input type='submit' value='Agregar'/></p>
 </form>
-
 [<a href="{% url 'index' %}">inicio</a>]
+
+
