@@ -33,18 +33,17 @@
 </table>
 
 
-<h2>Estudiantes y sus Matrículas</h2>
+<h3>Lista de Estudianes</h3>
 <hr>
 [<a href="{% url 'crear_matricula' %}">nuevo</a>]
 <hr>
 <table border="1px">
   <tr>
-    <th><b>Nombre</b></th>
+    <th><b>Estudiante</b></th>
     <th><b>Apellido</b></th>
     <th><b>Tipo</b></th>
     <th><b>Edad</b></th>
     <th><b>Matriculas</b></th>
-
   </tr>
   {% for e in matriculas %}
   <tr>
@@ -56,7 +55,21 @@
       {{e.estudiante.apellido}}
     </td>
     <td>
-      {{e.tipo}}
+      {{e.estudiante.tipo_estudiante}}
+    </td>
+    <td>
+      {{e.estudiante.edad}}
+    <td>
+      <ul>
+        {% for matricula in e.estudiante.lasmatriculas.all %}
+  <li>
+    {{ matricula.modulo.get_nombre_display }} - 
+    ${{ matricula.loscostos.first.costo|default:"0.00" }}
+  </li>
+{% endfor %}
+
+
+      </ul>
     </td>
     <td>
       [<a href="{% url 'detalle_matricula' e.id %}">ver</a>]
@@ -64,14 +77,4 @@
     </td>
   </tr>
   {% endfor %}
-
 </table>
-
-
-
-
-
-
-
-
-
