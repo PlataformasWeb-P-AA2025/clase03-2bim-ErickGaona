@@ -5,3 +5,7 @@ Si no se usa related_name, se puede usar el nombre del modelo en minúsculas seg
 
 
 
+### 25 Junio 2025
+
+* En el ejemplo 5 en la vista implementamos agregar numeros telefonicos una en general donde en la interfaz podemos elegir de cual estudiante es ese numero que vamos a crear, el segundo agrega numeros telefonicos de un estudiante en especifico que se encuentra debajo de cada estudiante, indicando que ese proximo numero a crear sera para el estudiante que queremos directamente
+
