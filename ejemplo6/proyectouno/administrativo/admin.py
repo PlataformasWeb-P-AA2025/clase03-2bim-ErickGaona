@@ -32,3 +32,10 @@ class MatriculaAdmin(admin.ModelAdmin):
 
 admin.site.register(Matricula, MatriculaAdmin)
 
+
+class costosMatriculaAdmin(admin.ModelAdmin):
+    """
+    """
+    list_display = ('matricula', 'valor')
+    search_fields = ('matricula__estudiante__nombre',)
+

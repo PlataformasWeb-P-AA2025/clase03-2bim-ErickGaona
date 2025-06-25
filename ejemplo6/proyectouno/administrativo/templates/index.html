@@ -31,3 +31,47 @@
   {% endfor %}
 
 </table>
+
+
+<h2>Estudiantes y sus Matrículas</h2>
+<hr>
+[<a href="{% url 'crear_matricula' %}">nuevo</a>]
+<hr>
+<table border="1px">
+  <tr>
+    <th><b>Nombre</b></th>
+    <th><b>Apellido</b></th>
+    <th><b>Tipo</b></th>
+    <th><b>Edad</b></th>
+    <th><b>Matriculas</b></th>
+
+  </tr>
+  {% for e in matriculas %}
+  <tr>
+    <td>
+      {{e.estudiante.nombre}}
+      [<a href="{% url 'detalle_estudiante' e.estudiante.id %}">+</a>]
+    </td>
+    <td>
+      {{e.estudiante.apellido}}
+    </td>
+    <td>
+      {{e.tipo}}
+    </td>
+    <td>
+      [<a href="{% url 'detalle_matricula' e.id %}">ver</a>]
+      [<a href="{% url 'editar_matricula' e.id %}">editar</a>]
+    </td>
+  </tr>
+  {% endfor %}
+
+</table>
+
+
+
+
+
+
+
+
+

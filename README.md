@@ -9,3 +9,4 @@ Si no se usa related_name, se puede usar el nombre del modelo en minúsculas seg
 
 * En el ejemplo 5 en la vista implementamos agregar numeros telefonicos una en general donde en la interfaz podemos elegir de cual estudiante es ese numero que vamos a crear, el segundo agrega numeros telefonicos de un estudiante en especifico que se encuentra debajo de cada estudiante, indicando que ese proximo numero a crear sera para el estudiante que queremos directamente
 
+ademas de eso tambien la explicacion de hidden para que no muestre la sellecion de estudiantes nuevamente en el formulario, donde ya teniamos por asi decirlo "ubicado" o guardado el estudiante

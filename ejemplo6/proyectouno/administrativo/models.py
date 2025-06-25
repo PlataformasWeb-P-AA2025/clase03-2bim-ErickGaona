@@ -60,3 +60,20 @@ class Matricula(models.Model):
     def __str__(self):
         return "Matricula: Estudiante(%s) - Modulo(%s)" % \
                 (self.estudiante, self.modulo.nombre)
+
+
+# agregar atributo a la clase matriculas 
+
+class costosMatricula(models.Model):
+    """
+    """
+    matricula = models.ForeignKey(Matricula, related_name='loscostos',
+            on_delete=models.CASCADE)
+    costo = models.FloatField()
+
+    def __str__(self):
+        return "Costo de matrícula: %s - Costo: %.2f" % \
+                (self.matricula, self.costo)
+
+
+

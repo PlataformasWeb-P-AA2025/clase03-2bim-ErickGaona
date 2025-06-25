@@ -73,3 +73,18 @@ def detalle_estudiante(request, id):
     estudiante = Estudiante.objects.get(pk=id)
     informacion_template = {'e': estudiante}
     return render(request, 'detalle_estudiante.html', informacion_template)
+
+
+def costos_matricula(request, id):
+    """
+    """
+    matricula = Matricula.objects.get(pk=id)
+    costos = matricula.loscostos.all()
+    informacion_template = {'matricula': matricula, 'costos': costos}
+    return render(request, 'costos_matricula.html', informacion_template)
+
+
+def listado_estudiantes_con_matriculas(request):
+    estudiantes = Estudiante.objects.all()
+    contexto = {'estudiantes': estudiantes}
+    return render(request, 'index.html', contexto)
